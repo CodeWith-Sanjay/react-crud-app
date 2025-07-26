@@ -57,17 +57,18 @@ CRUD_users/
 2. Install dependencies:
     npm install
 3. Create a table in PostgreSQL:
-    CREATE TABLE crud_users (
-    name TEXT,
-    age INT,
-    email TEXT,
-    gender TEXT,
-    city TEXT,
-    country TEXT,
-    contact TEXT,
-    qualification TEXT,
-    specification TEXT,
-    job TEXT
+    CREATE TABLE crud_user (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(50),
+	age INTEGER,
+	email VARCHAR(50),
+	gender VARCHAR(10),
+	city VARCHAR(30),
+	country VARCHAR(30),
+	contact VARCHAR(10),
+	qualification VARCHAR(50),
+	specification VARCHAR(50),
+	job VARCHAR(50)
     );
 4. Configure database connection in db.js.
 5. Start the backend:
