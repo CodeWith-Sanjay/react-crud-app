@@ -98,9 +98,6 @@ node index.js
 - The frontend makes API requests to /users endpoint.
 - Form validation and user feedback can be enhanced.
 
-📸 Screenshots
-Add screenshots here for better visibility (optional)
-
 🛡 License
 This project is open-source and free to use for learning purposes.
 
