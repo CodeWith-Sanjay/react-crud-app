@@ -1,0 +1,112 @@
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    max-height: 100vh;
+    width: 100vw;
+    padding: 40px;
+    background: linear-gradient(to bottom right, #A3DC9A, #DEE791);
+    background-size: 400% 400%;
+
+    /* animation-duration: 3s;
+    animation-name: backgroundtransition;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal; */
+
+    animation: backgroundtransition 3s ease infinite;
+}
+@keyframes backgroundtransition {
+    0% {
+        background-position: 0% 50%;
+    } 
+    50% {
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+} 
+
+.register-form {
+    min-height: 60vh;
+    min-width: 300px;
+    max-width: 500px;
+    max-height: 80vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+}
+
+.input-with-icons {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.input-with-icons .input-icons {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) translateX(-20px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    color: #555;  
+}
+
+.input-with-icons input, .input-with-icons select{
+    height: 40px;
+    width: 100%;
+    min-width: 200px;
+    padding: 10px 10px 10px 40px;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.3s ease;
+    background-color: azure;
+}
+
+/* .input-with-icons:hover .input-icons,
+.input-with-icons input:hover + .input-icons {
+    opacity: 1;
+} */
+
+.input-with-icons:hover .input-icons,
+.input-with-icons:hover ~ .input-icons,
+.input-with-icons input:focus ~ .input-icons,
+.input-with-icons input:active ~ .input-icons {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+}
+
+.submit-btn {
+    height: 45px;
+    width: 100%;
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.3s ease;
+    background-color: azure;
+}
+
+.submit-btn:hover {
+    background-color: forestgreen;
+    color: white;
+    font-weight: lighter;
+}
